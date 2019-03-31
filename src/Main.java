@@ -6,5 +6,6 @@ public class Main {
         System.out.println(Arrays.toString(InsertionSort.insertionSort(list)));
         System.out.println(Arrays.toString(BubbleSort.bubbleSort(list)));
         System.out.println(Arrays.toString(MergeSort.mergeSort(list)));
+        System.out.println(Arrays.toString(QuickSort.quickSort(list)));
     }
 }
