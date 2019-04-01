@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Sorting {
     private int[] arrayList;
@@ -43,6 +44,18 @@ public class Sorting {
 
     @Override
     public String toString() {
-        return "Algne massiiv: " +Arrays.toString(this.arrayList);
+        if (arrayList.length > 100) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Massiiv ületab üle saja elemendi, kas tahate, et väljastada massiiv? " +
+                    "(jah/ei)");
+            String answer = scanner.nextLine();
+            if (answer.equals("jah")) {
+                return "Algne massiiv: " + Arrays.toString(this.arrayList);
+            } else {
+                return "Massiiv, millel on " + arrayList.length + " pikkus";
+            }
+        } else {
+            return "Algne massiiv: " + Arrays.toString(this.arrayList);
+        }
     }
 }
