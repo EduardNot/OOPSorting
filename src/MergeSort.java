@@ -4,6 +4,10 @@ public class MergeSort extends Sorting implements SortingInterface {
         super(length);
     }
 
+    public MergeSort(int[] array){
+        super(array);
+    }
+
     public MergeSort(){ return; }
 
     public int[] sort(int[] list) {

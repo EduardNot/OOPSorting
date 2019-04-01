@@ -34,17 +34,17 @@ public class Main {
             else {
                 Sorting sorting = new Sorting();
                 int[] massiiv = sorting.setArrayValue(pikkus);
-                sorting.setArrayList(massiiv);
-                InsertionSort insertionSort = new InsertionSort();
+                //sorting.setArrayList(massiiv);
+                InsertionSort insertionSort = new InsertionSort(massiiv);
                 insertionSort.sort(massiiv);
 
-                BubbleSort bubbleSort = new BubbleSort();
+                BubbleSort bubbleSort = new BubbleSort(massiiv);
                 bubbleSort.sort(massiiv);
 
-                MergeSort mergeSort = new MergeSort();
+                MergeSort mergeSort = new MergeSort(massiiv);
                 mergeSort.sort(massiiv);
 
-                QuickSort quickSort = new QuickSort();
+                QuickSort quickSort = new QuickSort(massiiv);
                 quickSort.sort(massiiv);
             }
         }
@@ -55,18 +55,18 @@ public class Main {
         System.out.println("Tegemist on sorteerimis programmiga, kus käsitletakse erinevaid sorteerimis " +
                 "algoritme.\n");
         Scanner scanner = new Scanner(System.in);
-        int number = 0;
+        int number1 = 0;
         boolean kordus = true;
         while (kordus) {
             System.out.println("1. Kasutada kõik sorteerimis meetodid.");
             System.out.println("2. Valide kindel sorteerimis meetod.");
             System.out.println("3. Väljuda.");
             System.out.print("Palun tehke enda valik: ");
-            number = scanner.nextInt();
-            switch (number){
+            number1 = scanner.nextInt();
+            switch (number1){
 
                 case 1:
-                    clearScreen();
+                    System.out.print("\033[H\033[2J");
                     generateAndPrintArray(5);
                     break;
 
@@ -77,8 +77,8 @@ public class Main {
                     System.out.println("3. Mergesort");
                     System.out.println("4. Quicksort");
                     System.out.print("Palun tehke enda valik: ");
-                    number = scanner.nextInt();
-                    switch (number){
+                    int number2 = scanner.nextInt();
+                    switch (number2){
                         case 1:
                             clearScreen();
                             generateAndPrintArray(1);
@@ -97,6 +97,7 @@ public class Main {
                             generateAndPrintArray(4);
                             break;
                     }
+                    break;
 
                 case 3:
                     kordus = false;

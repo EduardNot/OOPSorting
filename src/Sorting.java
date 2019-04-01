@@ -30,7 +30,9 @@ public class Sorting {
         this.arrayList = setArrayValue(length);
     }
 
-    public Sorting(){ }
+    public Sorting(int[] array){ this.arrayList = array; }
+
+    public Sorting(){}
 
     public void tookTime(){
         System.out.println("Aega kulus " + (endTime - startTime) / 1000000.0 + " millisek");

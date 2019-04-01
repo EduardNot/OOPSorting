@@ -3,7 +3,9 @@ public class InsertionSort extends Sorting implements SortingInterface {
         super(length);
     }
 
-    public InsertionSort(){ }
+    public InsertionSort(int[] array){
+        super(array);
+    }
 
     public int[] sort(int[] list) {
         setOriginalArray(list);

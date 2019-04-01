@@ -4,6 +4,10 @@ public class QuickSort extends Sorting implements SortingInterface {
         super(length);
     }
 
+    public QuickSort(int[] array){
+        super(array);
+    }
+
     public QuickSort(){ return; }
 
     public int[] sort(int[] list) {

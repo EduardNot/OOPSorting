@@ -3,6 +3,10 @@ public class BubbleSort extends Sorting implements SortingInterface {
         super(length);
     }
 
+    public BubbleSort(int[] array){
+        super(array);
+    }
+
     public BubbleSort(){ return; }
 
     public int[] sort(int[] list) {
