@@ -6,40 +6,53 @@ public class Sorting {
     private long startTime;
     private long endTime;
     private boolean toStringAnswer = false;
-    private int[] sorted;
+    private int[] originalArray;
 
-    public void setSorted(int[] sorted) {
-        this.sorted = sorted;
+    public void setOriginalArray(int[] arrayList) {
+        this.originalArray = arrayList.clone();
     }
 
-    public int[] getSorted() {
-        return sorted;
-    }
 
     public void setStartTime() {
         this.startTime = System.nanoTime();
     }
 
-    public long getEndTime() {
-        return endTime;
-    }
 
     public void setEndTime() {
         this.endTime = System.nanoTime();
     }
 
-    public Sorting(int length) {
-        this.arrayList = randomArrayList(length);
+    public void setArrayList(int[] arrayList) {
+        this.arrayList = arrayList;
     }
+
+    public Sorting(int length) {
+        this.arrayList = setArrayValue(length);
+    }
+
+    public Sorting(){ }
 
     public void tookTime(){
         System.out.println("Aega kulus " + (endTime - startTime) / 1000000.0 + " millisek");
     }
 
-    public static int[] randomArrayList(int length) {
+    public int[] setArrayValue(int length) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("1. Genereeritakse suva masssiiv väärtused.");
+        System.out.println("2. Sisestate ise massiivi vÄärtused.");
+        System.out.print("Palun tehke enda valik: ");
+        int number = scanner.nextInt();
         int[] arrayList = new int[length];
-        for (int i = 0; i < length; i++) {
-            arrayList[i] = (int) (Math.random() * ((100 + 100) + 1)) - 100;
+        if (number == 1) {
+            for (int i = 0; i < length; i++) {
+                arrayList[i] = (int) (Math.random() * ((100 + 100) + 1)) - 100;
+            }
+        }
+        else if (number == 2){
+            for (int j = 0; j < length; j++) {
+                System.out.println("Sisestage " + (j+1) + ". number: ");
+                arrayList[j] = scanner.nextInt();
+            }
         }
         return arrayList;
     }
@@ -68,13 +81,15 @@ public class Sorting {
     @Override
     public String toString() {
         if (arrayList.length > 100) {
+            toStirngQuestion();
             if (isToStringAnswer()) {
-                return "Algne massiiv: " + Arrays.toString(this.arrayList);
+                return "Antud massiiv: " + Arrays.toString(originalArray) + "\nSorteeritud massiiv: " + Arrays.toString(arrayList);
             } else {
-                return "Massiiv, millel on " + arrayList.length + " elementi";
+                return "Antud massiiv: " + Arrays.toString(originalArray) + "\nSortteertud massiiv, millel on " + arrayList.length +
+                        " elementi.";
             }
         } else {
-            return "Algne massiiv: " + Arrays.toString(this.arrayList);
+            return "Antud massiiv: " + Arrays.toString(originalArray) + "\nSorteeritud massiiv: " + Arrays.toString(arrayList);
         }
     }
 }

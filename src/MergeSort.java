@@ -1,15 +1,14 @@
-import java.util.Arrays;
-
 public class MergeSort extends Sorting implements SortingInterface {
-    private Sorting sorting;
 
     public MergeSort(int length) {
         super(length);
-        this.sorting = new Sorting(length);
     }
 
+    public MergeSort(){ return; }
+
     public int[] sort(int[] list) {
-        this.sorting.setStartTime();
+        setOriginalArray(list);
+        setStartTime();
         if (list.length > 1) {
             int[] firstHalf = new int[list.length / 2];
             System.arraycopy(list, 0, firstHalf, 0, list.length / 2);
@@ -21,9 +20,9 @@ public class MergeSort extends Sorting implements SortingInterface {
             sort(secondHalf);
             merge(firstHalf, secondHalf, list);
         }
-        this.sorting.setEndTime();
-        this.sorting.tookTime();
-        this.sorting.setSorted(list);
+        setEndTime();
+        tookTime();
+        System.out.println(toString());
         return list;
     }
 
@@ -46,20 +45,6 @@ public class MergeSort extends Sorting implements SortingInterface {
             while (current2 < list2.length) {
                 temp[current3++] = list2[current2++];
             }
-        }
-    }
-    @Override
-    public String toString() {
-        if (sorting.getSorted().length > 100) {
-            toStirngQuestion();
-            if (isToStringAnswer()) {
-                return super.toString() + "\nSorteeritud massiiv: " + Arrays.toString(this.sorting.getSorted());
-            } else {
-                return super.toString() + "\nSortteertud massiiv, millel on " + this.sorting.getSorted().length + " " +
-                        "elementi.";
-            }
-        } else {
-            return super.toString() + "\nSorteeritud massiiv: " + Arrays.toString(this.sorting.getSorted());
         }
     }
 }

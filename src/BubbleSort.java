@@ -1,15 +1,14 @@
-import java.util.Arrays;
-
 public class BubbleSort extends Sorting implements SortingInterface {
-    private Sorting sorting;
     public BubbleSort(int length) {
         super(length);
-        this.sorting = new Sorting(length);
     }
 
+    public BubbleSort(){ return; }
+
     public int[] sort(int[] list) {
+        setOriginalArray(list);
         boolean needNextPass = true;
-        this.sorting.setStartTime();
+        setStartTime();
         for (int k = 1; k < list.length && needNextPass; k++) {
             needNextPass = false;
             for (int i = 0; i < list.length - k; i++) {
@@ -22,24 +21,9 @@ public class BubbleSort extends Sorting implements SortingInterface {
                 }
             }
         }
-        this.sorting.setEndTime();
-        this.sorting.tookTime();
-        this.sorting.setSorted(list);
+        setEndTime();
+        tookTime();
+        System.out.println(toString());
         return list;
-    }
-
-    @Override
-    public String toString() {
-        if (sorting.getSorted().length > 100) {
-            toStirngQuestion();
-            if (isToStringAnswer()) {
-                return super.toString() + "\nSorteeritud massiiv: " + Arrays.toString(this.sorting.getSorted());
-            } else {
-                return super.toString() + "\nSortteertud massiiv, millel on " + this.sorting.getSorted().length + " " +
-                        "elementi.";
-            }
-        } else {
-            return super.toString() + "\nSorteeritud massiiv: " + Arrays.toString(this.sorting.getSorted());
-        }
     }
 }

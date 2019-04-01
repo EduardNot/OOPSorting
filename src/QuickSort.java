@@ -1,19 +1,18 @@
-import java.util.Arrays;
-
 public class QuickSort extends Sorting implements SortingInterface {
-    private Sorting sorting;
 
     public QuickSort(int length) {
         super(length);
-        this.sorting = new Sorting(length);
     }
 
+    public QuickSort(){ return; }
+
     public int[] sort(int[] list) {
-        this.sorting.setStartTime();
+        setOriginalArray(list);
+        setStartTime();
         quickSort(list, 0, list.length - 1);
-        this.sorting.setEndTime();
-        this.sorting.tookTime();
-        this.sorting.setSorted(list);
+        setEndTime();
+        tookTime();
+        System.out.println(toString());
         return list;
     }
 
@@ -55,20 +54,6 @@ public class QuickSort extends Sorting implements SortingInterface {
             return high;
         } else {
             return first;
-        }
-    }
-    @Override
-    public String toString() {
-        if (sorting.getSorted().length > 100) {
-            toStirngQuestion();
-            if (isToStringAnswer()) {
-                return super.toString() + "\nSorteeritud massiiv: " + Arrays.toString(this.sorting.getSorted());
-            } else {
-                return super.toString() + "\nSortteertud massiiv, millel on " + this.sorting.getSorted().length + " " +
-                        "elementi.";
-            }
-        } else {
-            return super.toString() + "\nSorteeritud massiiv: " + Arrays.toString(this.sorting.getSorted());
         }
     }
 }
