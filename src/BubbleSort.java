@@ -1,7 +1,13 @@
-public class BubbleSort implements SortingInterface {
-    public static int[] sort(int[] list) {
-        boolean needNextPass = true;
+public class BubbleSort extends Sorting implements SortingInterface {
+    private Sorting sorting;
+    public BubbleSort(int length) {
+        super(length);
+        this.sorting = new Sorting(length);
+    }
 
+    public int[] sort(int[] list) {
+        boolean needNextPass = true;
+        this.sorting.setStartTime();
         for (int k = 1; k < list.length && needNextPass; k++) {
             needNextPass = false;
             for (int i = 0; i < list.length - k; i++) {
@@ -14,6 +20,8 @@ public class BubbleSort implements SortingInterface {
                 }
             }
         }
+        this.sorting.setEndTime();
+        sorting.tookTime();
         return list;
     }
 }

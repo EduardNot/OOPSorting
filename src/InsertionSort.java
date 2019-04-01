@@ -1,5 +1,12 @@
 public class InsertionSort extends Sorting implements SortingInterface {
-    public static int[] sort(int[] list) {
+    private Sorting sorting;
+    public InsertionSort(int length) {
+        super(length);
+        this.sorting = new Sorting(length);
+    }
+
+    public int[] sort(int[] list) {
+        this.sorting.setStartTime();
         for (int i = 1; i < list.length; i++) {
             int currentElement = list[i];
             int k;
@@ -8,6 +15,8 @@ public class InsertionSort extends Sorting implements SortingInterface {
             }
             list[k + 1] = currentElement;
         }
+        this.sorting.setEndTime();
+        sorting.tookTime();
         return list;
     }
 }

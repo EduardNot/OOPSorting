@@ -1,6 +1,16 @@
-public class QuickSort implements SortingInterface {
-    public static int[] sort(int[] list) {
+public class QuickSort extends Sorting implements SortingInterface {
+    private Sorting sorting;
+
+    public QuickSort(int length) {
+        super(length);
+        this.sorting = new Sorting(length);
+    }
+
+    public int[] sort(int[] list) {
+        this.sorting.setStartTime();
         quickSort(list, 0, list.length - 1);
+        this.sorting.setEndTime();
+        sorting.tookTime();
         return list;
     }
 

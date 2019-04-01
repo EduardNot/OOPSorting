@@ -1,5 +1,13 @@
-public class MergeSort implements SortingInterface {
-    public static int[] sort(int[] list) {
+public class MergeSort extends Sorting implements SortingInterface {
+    private Sorting sorting;
+
+    public MergeSort(int length) {
+        super(length);
+        this.sorting = new Sorting(length);
+    }
+
+    public int[] sort(int[] list) {
+        this.sorting.setStartTime();
         if (list.length > 1) {
             int[] firstHalf = new int[list.length / 2];
             System.arraycopy(list, 0, firstHalf, 0, list.length / 2);
@@ -11,6 +19,8 @@ public class MergeSort implements SortingInterface {
             sort(secondHalf);
             merge(firstHalf, secondHalf, list);
         }
+        this.sorting.setEndTime();
+        sorting.tookTime();
         return list;
     }
 
