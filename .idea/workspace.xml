@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97fc42fa-80e4-40ae-9583-856b0a506b80" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Sorting.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/InsertionSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InsertionSort.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,7 +18,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
@@ -26,10 +28,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Sorting.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/InsertionSort.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+            <state>
+              <caret column="42" selection-start-column="42" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -80,8 +91,8 @@
         <option value="$PROJECT_DIR$/src/MergeSort.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/QuickSort.java" />
-        <option value="$PROJECT_DIR$/src/InsertionSort.java" />
         <option value="$PROJECT_DIR$/src/Sorting.java" />
+        <option value="$PROJECT_DIR$/src/InsertionSort.java" />
       </list>
     </option>
   </component>
@@ -118,7 +129,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554110620777" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554110635853" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -163,7 +174,7 @@
       <option name="presentableId" value="Default" />
       <updated>1554059436215</updated>
       <workItem from="1554059444395" duration="4468000" />
-      <workItem from="1554107421337" duration="1831000" />
+      <workItem from="1554107421337" duration="2083000" />
     </task>
     <task id="LOCAL-00001" summary="Initial insertion sort implementation and some testing">
       <created>1554060850318</created>
@@ -200,17 +211,24 @@
       <option name="project" value="LOCAL" />
       <updated>1554110353454</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Initial merge sort implementation and some minor testing">
+      <created>1554110632510</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1554110632510</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6299000" />
+    <option name="totallyTimeSpent" value="6551000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28304905" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28304905" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -228,7 +246,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4989339" weight="0.32887402" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="11" sideWeight="0.50159913" side_tool="true" visible="true" weight="0.32887402" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50159913" side_tool="true" weight="0.32887402" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.3295129" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -272,24 +290,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/InsertionSort.java">
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+        <state relative-caret-position="187">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Sorting.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="25" lean-forward="true" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+        <state relative-caret-position="120">
+          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/InsertionSort.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        <state>
+          <caret column="42" selection-start-column="42" selection-end-column="42" />
         </state>
       </provider>
     </entry>

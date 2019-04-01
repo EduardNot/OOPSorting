@@ -1,4 +1,4 @@
-public class InsertionSort {
+public class InsertionSort extends Sorting{
     public static int[] insertionSort(int[] list) {
         for (int i = 1; i < list.length; i++) {
             int currentElement = list[i];
