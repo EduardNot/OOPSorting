@@ -1,5 +1,5 @@
-public class BubbleSort {
-    public static int[] bubbleSort(int[] list) {
+public class BubbleSort implements SortingInterface {
+    public static int[] sort(int[] list) {
         boolean needNextPass = true;
 
         for (int k = 1; k < list.length && needNextPass; k++) {

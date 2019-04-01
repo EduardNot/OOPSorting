@@ -1,14 +1,14 @@
-public class MergeSort {
-    public static int[] mergeSort(int[] list) {
+public class MergeSort implements SortingInterface {
+    public static int[] sort(int[] list) {
         if (list.length > 1) {
             int[] firstHalf = new int[list.length / 2];
             System.arraycopy(list, 0, firstHalf, 0, list.length / 2);
-            mergeSort(firstHalf);
+            sort(firstHalf);
 
             int secondHalfLength = list.length - list.length / 2;
             int[] secondHalf = new int[secondHalfLength];
             System.arraycopy(list, list.length / 2, secondHalf, 0, secondHalfLength);
-            mergeSort(secondHalf);
+            sort(secondHalf);
             merge(firstHalf, secondHalf, list);
         }
         return list;

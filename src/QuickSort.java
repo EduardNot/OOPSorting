@@ -1,5 +1,5 @@
-public class QuickSort {
-    public static int[] quickSort(int[] list) {
+public class QuickSort implements SortingInterface {
+    public static int[] sort(int[] list) {
         quickSort(list, 0, list.length - 1);
         return list;
     }
