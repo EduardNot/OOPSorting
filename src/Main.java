@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -17,8 +16,10 @@ public class Main {
             arrays[i] = Sorting.randomArrayList(length);
         }
         InsertionSort insertionSort = new InsertionSort(500);
-        System.out.println(insertionSort.toString());
-        System.out.println(Arrays.toString(insertionSort.sort(insertionSort.getArrayList())));
+        //System.out.println(insertionSort.toString());
+        insertionSort.sort(insertionSort.getArrayList());
+        //System.out.println(Arrays.toString(insertionSort.sort(insertionSort.getArrayList())));
+
         //System.out.println(Arrays.toString(InsertionSort.sort(arrays[0])));
         /*int[] list = {1, 9, 4, 6, 5, -4};
         System.out.println(Arrays.toString(InsertionSort.sort(list)));

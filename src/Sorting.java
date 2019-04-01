@@ -5,9 +5,15 @@ public class Sorting {
     private int[] arrayList;
     private long startTime;
     private long endTime;
+    private boolean toStringAnswer = false;
+    private int[] sorted;
 
-    public long getStartTime() {
-        return startTime;
+    public void setSorted(int[] sorted) {
+        this.sorted = sorted;
+    }
+
+    public int[] getSorted() {
+        return sorted;
     }
 
     public void setStartTime() {
@@ -42,17 +48,30 @@ public class Sorting {
         return arrayList;
     }
 
+    public void toStirngQuestion(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Massiiv ületab üle saja elemendi, kas tahate, et väljastada massiiv? " +
+                "(jah/ei)");
+        String answer = scanner.nextLine();
+        if (answer.equals("jah")){
+            toStringAnswer = true;
+        }
+        else {
+            toStringAnswer = false;
+        }
+    }
+
+    public boolean isToStringAnswer() {
+        return toStringAnswer;
+    }
+
     @Override
     public String toString() {
         if (arrayList.length > 100) {
-            Scanner scanner = new Scanner(System.in);
-            System.out.println("Massiiv ületab üle saja elemendi, kas tahate, et väljastada massiiv? " +
-                    "(jah/ei)");
-            String answer = scanner.nextLine();
-            if (answer.equals("jah")) {
+            if (isToStringAnswer()) {
                 return "Algne massiiv: " + Arrays.toString(this.arrayList);
             } else {
-                return "Massiiv, millel on " + arrayList.length + " pikkus";
+                return "Massiiv, millel on " + arrayList.length + " elementi";
             }
         } else {
             return "Algne massiiv: " + Arrays.toString(this.arrayList);
