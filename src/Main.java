@@ -2,11 +2,6 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static void clearScreen() {
-        System.out.print("\033[H\033[2J");
-        System.out.flush();
-    }
-
 
     public static void generateAndPrintArray(int valik){
         Scanner scanner = new Scanner(System.in);
@@ -34,7 +29,6 @@ public class Main {
             else {
                 Sorting sorting = new Sorting();
                 int[] massiiv = sorting.setArrayValue(pikkus);
-                //sorting.setArrayList(massiiv);
                 InsertionSort insertionSort = new InsertionSort(massiiv);
                 insertionSort.sort(massiiv);
 
@@ -50,10 +44,7 @@ public class Main {
         }
     }
 
-
-    public static void main(String[] args) {
-        System.out.println("Tegemist on sorteerimis programmiga, kus käsitletakse erinevaid sorteerimis " +
-                "algoritme.\n");
+    public static void input(){
         Scanner scanner = new Scanner(System.in);
         int number1 = 0;
         boolean kordus = true;
@@ -71,7 +62,6 @@ public class Main {
                     break;
 
                 case 2:
-                    clearScreen();
                     System.out.println("1. Insertionsort");
                     System.out.println("2. Bubblesort");
                     System.out.println("3. Mergesort");
@@ -80,20 +70,16 @@ public class Main {
                     int number2 = scanner.nextInt();
                     switch (number2){
                         case 1:
-                            clearScreen();
                             generateAndPrintArray(1);
                             break;
 
                         case 2:
-                            clearScreen();
                             generateAndPrintArray(2);
                             break;
                         case 3:
-                            clearScreen();
                             generateAndPrintArray(3);
                             break;
                         case 4:
-                            clearScreen();
                             generateAndPrintArray(4);
                             break;
                     }
@@ -103,18 +89,13 @@ public class Main {
                     kordus = false;
                     break;
             }
-
-//            System.out.println("Mitu array tahate teha?: ");
-//            number = scanner.nextInt();
-//
-//            for (int i = 0; i < number; i++) {
-//                System.out.println("Kui pikk massiiv?:");
-//                int length = scanner.nextInt();
-//
-//            }
-//            InsertionSort insertionSort = new InsertionSort(500);
-//
-//            insertionSort.sort(insertionSort.getArrayList());
         }
+    }
+
+
+    public static void main(String[] args) {
+        System.out.println("Tegemist on sorteerimis programmiga, kus käsitletakse erinevaid sorteerimis " +
+                "algoritme.\n");
+        input();
     }
 }
