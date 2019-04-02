@@ -8,24 +8,6 @@ public class Sorting {
     private boolean toStringAnswer = false;
     private int[] originalArray;
 
-    public void setOriginalArray(int[] arrayList) {
-        this.originalArray = arrayList.clone();
-    }
-
-
-    public void setStartTime() {
-        this.startTime = System.nanoTime();
-    }
-
-
-    public void setEndTime() {
-        this.endTime = System.nanoTime();
-    }
-
-    public void setArrayList(int[] arrayList) {
-        this.arrayList = arrayList;
-    }
-
     public Sorting(int length) {
         this.arrayList = setArrayValue(length);
     }
@@ -33,10 +15,6 @@ public class Sorting {
     public Sorting(int[] array){ this.arrayList = array; }
 
     public Sorting(){}
-
-    public void tookTime(){
-        System.out.println("Aega kulus " + (endTime - startTime) / 1000000.0 + " millisek");
-    }
 
     public int[] setArrayValue(int length) {
         Scanner scanner = new Scanner(System.in);
@@ -59,10 +37,6 @@ public class Sorting {
         return arrayList;
     }
 
-    public int[] getArrayList() {
-        return arrayList;
-    }
-
     public void toStirngQuestion(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Massiiv ületab üle saja elemendi, kas tahate, et väljastada massiiv? " +
@@ -76,8 +50,28 @@ public class Sorting {
         }
     }
 
+
+
+    public int[] getArrayList() { return arrayList; }
+
     public boolean isToStringAnswer() {
         return toStringAnswer;
+    }
+
+    public void setOriginalArray(int[] arrayList) {
+        this.originalArray = arrayList.clone();
+    }
+
+    public void setStartTime() {
+        this.startTime = System.nanoTime();
+    }
+
+    public void setEndTime() {
+        this.endTime = System.nanoTime();
+    }
+
+    public void tookTime(){
+        System.out.println("Aega kulus " + (endTime - startTime) / 1000000.0 + " millisek");
     }
 
     @Override
