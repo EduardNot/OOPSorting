@@ -29,15 +29,19 @@ public class Main {
             else {
                 Sorting sorting = new Sorting();
                 int[] massiiv = sorting.setArrayValue(pikkus);
+                System.out.println("Tegemist on insertion sort meetodiga.");
                 InsertionSort insertionSort = new InsertionSort(massiiv);
                 insertionSort.sort(massiiv);
 
+                System.out.println("Tegemist on bubble sort meetodiga.");
                 BubbleSort bubbleSort = new BubbleSort(massiiv);
                 bubbleSort.sort(massiiv);
 
+                System.out.println("Tegemist on merge sort meetodiga");
                 MergeSort mergeSort = new MergeSort(massiiv);
                 mergeSort.sort(massiiv);
 
+                System.out.println("Tegemist on quick sort meetodiga.");
                 QuickSort quickSort = new QuickSort(massiiv);
                 quickSort.sort(massiiv);
             }
