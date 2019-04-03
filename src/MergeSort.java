@@ -10,23 +10,30 @@ public class MergeSort extends Sorting implements SortingInterface {
 
     public MergeSort(){ return; }
 
-    public int[] sort(int[] list) {
+    public int[] sort(int[] list){
         setOriginalArray(list);
         setStartTime();
+        list = sortCall(list);
+        setEndTime();
+        tookTime();
+        System.out.println(toString());
+        return list;
+    }
+
+    public int[] sortCall(int[] list) {
+
         if (list.length > 1) {
             int[] firstHalf = new int[list.length / 2];
             System.arraycopy(list, 0, firstHalf, 0, list.length / 2);
-            sort(firstHalf);
+            sortCall(firstHalf);
 
             int secondHalfLength = list.length - list.length / 2;
             int[] secondHalf = new int[secondHalfLength];
             System.arraycopy(list, list.length / 2, secondHalf, 0, secondHalfLength);
-            sort(secondHalf);
+            sortCall(secondHalf);
             merge(firstHalf, secondHalf, list);
         }
-        setEndTime();
-        tookTime();
-        System.out.println(toString());
+
         return list;
     }
 

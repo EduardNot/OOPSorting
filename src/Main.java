@@ -5,10 +5,11 @@ public class Main {
 
     public static void generateAndPrintArray(int valik){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Mitu array tahate teha?: ");
+        System.out.print("Mitu array tahate teha?: ");
         int number = scanner.nextInt();
+        System.out.println();
         for (int i = 0; i < number; i++) {
-            System.out.print("Kui pikk on massiiv?:");
+            System.out.print("Kui pikk on " + (i + 1) + " massiiv?:");
             int pikkus = scanner.nextInt();
             if (valik == 1){
                 InsertionSort insertionSort = new InsertionSort(pikkus);
@@ -58,10 +59,10 @@ public class Main {
             System.out.println("3. Väljuda.");
             System.out.print("Palun tehke enda valik: ");
             number1 = scanner.nextInt();
+            System.out.println();
             switch (number1){
 
                 case 1:
-                    System.out.print("\033[H\033[2J");
                     generateAndPrintArray(5);
                     break;
 
@@ -72,6 +73,7 @@ public class Main {
                     System.out.println("4. Quicksort");
                     System.out.print("Palun tehke enda valik: ");
                     int number2 = scanner.nextInt();
+                    System.out.println();
                     switch (number2){
                         case 1:
                             generateAndPrintArray(1);

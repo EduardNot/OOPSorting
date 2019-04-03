@@ -22,6 +22,7 @@ public class Sorting {
         System.out.println("2. Sisestate ise massiivi vÄärtused.");
         System.out.print("Palun tehke enda valik: ");
         int number = scanner.nextInt();
+        System.out.println();
         int[] arrayList = new int[length];
         if (number == 1) {
             for (int i = 0; i < length; i++) {
@@ -76,16 +77,16 @@ public class Sorting {
 
     @Override
     public String toString() {
-        if (arrayList.length > 100) {
+        if (arrayList.length > 50) {
             toStirngQuestion();
             if (isToStringAnswer()) {
-                return "Antud massiiv: " + Arrays.toString(originalArray) + "\nSorteeritud massiiv: " + Arrays.toString(arrayList);
+                return "Antud massiiv: " + Arrays.toString(originalArray) + "\nSorteeritud massiiv: " + Arrays.toString(arrayList) + "\n";
             } else {
                 return "Antud massiiv: " + Arrays.toString(originalArray) + "\nSortteertud massiiv, millel on " + arrayList.length +
-                        " elementi.";
+                        " elementi.\n";
             }
         } else {
-            return "Antud massiiv: " + Arrays.toString(originalArray) + "\nSorteeritud massiiv: " + Arrays.toString(arrayList);
+            return "Antud massiiv: " + Arrays.toString(originalArray) + "\nSorteeritud massiiv: " + Arrays.toString(arrayList) + "\n";
         }
     }
 }
