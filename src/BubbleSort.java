@@ -27,6 +27,7 @@ public class BubbleSort extends Sorting implements SortingInterface {
         }
         setEndTime();
         tookTime();
+        setArrayList(list);
         System.out.println(toString());
         return list;
     }

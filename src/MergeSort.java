@@ -16,6 +16,7 @@ public class MergeSort extends Sorting implements SortingInterface {
         list = sortCall(list);
         setEndTime();
         tookTime();
+        setArrayList(list);
         System.out.println(toString());
         return list;
     }

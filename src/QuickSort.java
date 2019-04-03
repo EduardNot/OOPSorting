@@ -16,6 +16,7 @@ public class QuickSort extends Sorting implements SortingInterface {
         quickSort(list, 0, list.length - 1);
         setEndTime();
         tookTime();
+        setArrayList(list);
         System.out.println(toString());
         return list;
     }

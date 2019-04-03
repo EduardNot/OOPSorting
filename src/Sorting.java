@@ -55,6 +55,10 @@ public class Sorting {
 
     public int[] getArrayList() { return arrayList; }
 
+    public void setArrayList(int[] arrayList) {
+        this.arrayList = arrayList;
+    }
+
     public boolean isToStringAnswer() {
         return toStringAnswer;
     }

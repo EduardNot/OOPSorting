@@ -11,20 +11,25 @@ public class Main {
         for (int i = 0; i < number; i++) {
             System.out.print("Kui pikk on " + (i + 1) + " massiiv?:");
             int pikkus = scanner.nextInt();
+            System.out.println();
             if (valik == 1){
                 InsertionSort insertionSort = new InsertionSort(pikkus);
+                System.out.println("Tegemist on insertion sort meetodiga.");
                 insertionSort.sort(insertionSort.getArrayList());
             }
             else if (valik == 2){
+                System.out.println("Tegemist on bubble sort meetodiga.");
                 BubbleSort bubbleSort = new BubbleSort(pikkus);
                 bubbleSort.sort(bubbleSort.getArrayList());
             }
             else if (valik == 3){
                 MergeSort mergeSort = new MergeSort(pikkus);
+                System.out.println("Tegemist on merge sort meetodiga");
                 mergeSort.sort(mergeSort.getArrayList());
             }
             else if (valik == 4){
                 QuickSort quickSort = new QuickSort(pikkus);
+                System.out.println("Tegemist on quick sort meetodiga.");
                 quickSort.sort(quickSort.getArrayList());
             }
             else {
@@ -32,19 +37,19 @@ public class Main {
                 int[] massiiv = sorting.setArrayValue(pikkus);
                 System.out.println("Tegemist on insertion sort meetodiga.");
                 InsertionSort insertionSort = new InsertionSort(massiiv);
-                insertionSort.sort(massiiv);
+                insertionSort.sort(massiiv.clone());
 
                 System.out.println("Tegemist on bubble sort meetodiga.");
                 BubbleSort bubbleSort = new BubbleSort(massiiv);
-                bubbleSort.sort(massiiv);
+                bubbleSort.sort(massiiv.clone());
 
                 System.out.println("Tegemist on merge sort meetodiga");
                 MergeSort mergeSort = new MergeSort(massiiv);
-                mergeSort.sort(massiiv);
+                mergeSort.sort(massiiv.clone());
 
                 System.out.println("Tegemist on quick sort meetodiga.");
                 QuickSort quickSort = new QuickSort(massiiv);
-                quickSort.sort(massiiv);
+                quickSort.sort(massiiv.clone());
             }
         }
     }
