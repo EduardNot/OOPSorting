@@ -18,9 +18,9 @@ public class Sorting {
 
     public int[] setArrayValue(int length) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("1. Genereeritakse suva masssiiv väärtused.");
-        System.out.println("2. Sisestate ise massiivi vÄärtused.");
-        System.out.print("Palun tehke enda valik: ");
+        System.out.println("1. Massiivi väärtused genereeritakse suvaliselt ");
+        System.out.println("2. Kasutaja sisestab ise massiivi väärtused ");
+        System.out.print("Sisestage enda valik: ");
         int number = scanner.nextInt();
         System.out.println();
         int[] arrayList = new int[length];
@@ -38,9 +38,9 @@ public class Sorting {
         return arrayList;
     }
 
-    public void toStirngQuestion(){
+    public void toStringQuestion(){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Massiiv ületab üle saja elemendi, kas tahate, et väljastada massiiv? " +
+        System.out.println("Massiivi suurus ületab sada elementi, kas soovite antud massiivi väljastada? " +
                 "(jah/ei)");
         String answer = scanner.nextLine();
         if (answer.equals("jah")){
@@ -82,7 +82,7 @@ public class Sorting {
     @Override
     public String toString() {
         if (arrayList.length > 50) {
-            toStirngQuestion();
+            toStringQuestion();
             if (isToStringAnswer()) {
                 return "Antud massiiv: " + Arrays.toString(originalArray) + "\nSorteeritud massiiv: " + Arrays.toString(arrayList) + "\n";
             } else {
