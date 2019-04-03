@@ -40,7 +40,7 @@ public class Sorting {
 
     public void toStringQuestion(){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Massiivi suurus ületab sada elementi, kas soovite antud massiivi väljastada? " +
+        System.out.println("Massiivi suurus ületab 50 elementi, kas soovite antud massiivi väljastada? " +
                 "(jah/ei)");
         String answer = scanner.nextLine();
         if (answer.equals("jah")){

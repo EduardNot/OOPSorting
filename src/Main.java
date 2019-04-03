@@ -9,7 +9,7 @@ public class Main {
         int number = scanner.nextInt();
         System.out.println();
         for (int i = 0; i < number; i++) {
-            System.out.print("Kui pikk on " + (i + 1) + " massiiv?: ");
+            System.out.print("Kui pikk on " + (i + 1) + ". massiiv?: ");
             int pikkus = scanner.nextInt();
             System.out.println();
             if (valik == 1){
