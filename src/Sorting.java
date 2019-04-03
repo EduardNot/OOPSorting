@@ -86,7 +86,9 @@ public class Sorting {
             if (isToStringAnswer()) {
                 return "Antud massiiv: " + Arrays.toString(originalArray) + "\nSorteeritud massiiv: " + Arrays.toString(arrayList) + "\n";
             } else {
-                return "Antud massiiv: " + Arrays.toString(originalArray) + "\nSortteertud massiiv, millel on " + arrayList.length +
+                return "Antud massiiv, millel on  " + arrayList.length + " elementi.\nSortteertud massiiv, " +
+                        "millel " +
+                        "on " + arrayList.length +
                         " elementi.\n";
             }
         } else {
